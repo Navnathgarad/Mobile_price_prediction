@@ -19,7 +19,7 @@ battery_power= st.slider("Battery Backup(mAH)",501,1998,key="1")
 
 col1, col2 ,col3= st.columns(3)
 with col1:
-    X = st.selectbox("Four_G",('Yes','No'),key="2")
+    X = st.selectbox("Has 4G Connectivity or Not?",('Yes','No'),key="2")
     trial = ["Yes","No"]
     four_g = trial.index(X)
 
@@ -35,7 +35,7 @@ with col3:
 
 col1, col2 = st.columns(2)
 with col1:
-    P = st.selectbox("Three_G", ('Yes', 'No'), key="5")
+    P = st.selectbox("Has 3G Connectivity or Not?", ('Yes', 'No'), key="5")
     trial_4 = ["Yes", "No"]
     three_g = trial_4.index(P)
 
@@ -70,13 +70,13 @@ def predict_mobile(battery_power,four_g,blue,dual_sim,three_g,wifi,int_memory,pc
     input = np.array([[battery_power,four_g,blue,dual_sim,three_g,wifi,int_memory,pc,fc,ram,px_height,px_width,sc_h,sc_w]])#.astype(np.float64)
     prediction = decision_tree_model.predict(input)
     if prediction == 0:
-        prediction = "10,000 to 20,000"
+        prediction = "5,000 to 10,000"
     elif prediction == 1:
-        prediction = "20,000 to 30,000"
+        prediction = "10,000 to 15,000"
     elif prediction == 2:
-        prediction = "30,000 to 40,000"
+        prediction = "15,000 to 20,000"
     elif prediction == 3:
-        prediction = "30,000 and Above "
+        prediction = "20,000 and Above "
 
     return prediction
     #return prediction[0]
