@@ -12,7 +12,7 @@ html_temp = """
 </div>
 """
 st.markdown(html_temp, unsafe_allow_html=True)
-image = Image.open('mobile.png')
+image = Image.open('mobile.jpg')
 st.image(image,'mobile')
 
 battery_power= st.slider("Battery Backup(mAH)",501,1998,key="1")
