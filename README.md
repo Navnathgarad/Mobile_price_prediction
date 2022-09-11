@@ -3,5 +3,4 @@
 2)Also it will be useful for Consumers to verify that they are paying best price for a mobile.
 
 Applied Models:
-1) Linear regression
-2) Decision Tree
+ Decision Tree
