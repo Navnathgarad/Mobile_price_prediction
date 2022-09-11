@@ -49,15 +49,15 @@ ram = st.slider("Ram (Mhz i.e 1GB = 1000 Mhz)",256,3998,key="9")
 
 col1, col2 = st.columns(2)
 with col1:
-    px_height = st.slider("Pixel Height(cm)",0,1960,key="10")
+    px_height = st.slider("Pixel Resolution Height",0,1960,key="10")
 with col2:
-    px_width = st.slider("Pixel width(cm)",500,1998,key="11")
+    px_width = st.slider("Pixel Resolution width",500,1998,key="11")
 
 col1, col2 = st.columns(2)
 with col1:
     mobile_wt = st.slider("Mobile Weight",80,200,key="12")
 with col2:
-    sc_w = st.slider("Screen width(cm)",0,18,key="13")
+    sc_w = st.slider("Screen width(cm)",2,18,key="13")
 
 def predict_mobile(battery_power,four_g,three_g,touch_screen,m_dep,talk_time,pc,fc,ram,px_height,px_width,mobile_wt,sc_w):
     input = np.array([[battery_power,four_g,three_g,touch_screen,m_dep,talk_time,pc,fc,ram,px_height,px_width,mobile_wt,sc_w]])#.astype(np.float64)
